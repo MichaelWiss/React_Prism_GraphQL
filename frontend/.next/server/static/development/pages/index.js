@@ -162,31 +162,34 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 22
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 23
         },
         __self: this
       }, "Items!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_1__["Query"], {
         query: ALL_ITEMS_QUERY,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 24
         },
         __self: this
-      }, function (payload) {
-        console.log(payload);
+      }, function (_ref) {
+        var data = _ref.data,
+            error = _ref.error,
+            loading = _ref.loading;
+        console.log(data);
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26
+            lineNumber: 27
           },
           __self: this
-        }, "Hey I'm the child of query");
+        }, "I found ", data.items.length, "items!");
       }));
     }
   }]);

@@ -1,11 +1,15 @@
 type User {
-  id: ID! @unique
+  id: ID! @id
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
   name: String!
   email: String!
 }
 
 type Item {
-  id: ID! @unique
+  id: ID! @id
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
   title: String!
   description: String!
   image: String
@@ -14,4 +18,4 @@ type Item {
   # createAt: DateTime!
   # updatedAt: DateTime!
   # user: User!
-}  
+} 
